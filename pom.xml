@@ -12,7 +12,6 @@
     <name>Helper</name>
 
     <modules>
-        <module>helper-test1</module>
         <module>helper-test2</module>
     </modules>
 
