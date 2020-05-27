@@ -12,7 +12,7 @@
     <name>Helper</name>
 
     <modules>
-        <module>helper-test2</module>
+        <module>helper-test</module>
     </modules>
 
     <distributionManagement>
