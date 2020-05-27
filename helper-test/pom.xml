@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.github.hyx2020</groupId>
         <artifactId>helper-parent</artifactId>
-        <version>2020.05.27</version>
+        <version>2020.5.27</version>
     </parent>
 
     <artifactId>helper-test</artifactId>
