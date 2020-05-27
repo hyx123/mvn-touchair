@@ -6,10 +6,11 @@
 
     <parent>
         <groupId>com.github.hyx2020</groupId>
-        <artifactId>helper-test</artifactId>
+        <artifactId>helper-parent</artifactId>
         <version>2020.05.27</version>
     </parent>
 
     <artifactId>helper-test</artifactId>
     <packaging>pom</packaging>
+    <name>Helper Test</name>
 </project>
