@@ -13,6 +13,7 @@
 
     <modules>
         <module>helper-test</module>
+        <module>helper-temp</module>
     </modules>
 
     <distributionManagement>
