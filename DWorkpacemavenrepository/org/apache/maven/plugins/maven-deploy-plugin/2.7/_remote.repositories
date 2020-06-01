@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 29 14:47:14 CST 2020
+maven-deploy-plugin-2.7.jar>alimaven=
+maven-deploy-plugin-2.7.pom>alimaven=
+maven-deploy-plugin-2.7.jar>central=
+maven-deploy-plugin-2.7.pom>central=

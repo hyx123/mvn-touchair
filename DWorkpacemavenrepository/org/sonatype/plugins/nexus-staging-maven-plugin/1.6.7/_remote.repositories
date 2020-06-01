@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 29 16:20:09 CST 2020
+nexus-staging-maven-plugin-1.6.7.jar>alimaven=
+nexus-staging-maven-plugin-1.6.7.jar>central=
+nexus-staging-maven-plugin-1.6.7.pom>alimaven=
+nexus-staging-maven-plugin-1.6.7.pom>central=

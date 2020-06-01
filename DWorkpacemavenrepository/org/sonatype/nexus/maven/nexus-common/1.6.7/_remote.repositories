@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 29 16:20:09 CST 2020
+nexus-common-1.6.7.jar>central=
+nexus-common-1.6.7.pom>central=
+nexus-common-1.6.7.jar>alimaven=
+nexus-common-1.6.7.pom>alimaven=
