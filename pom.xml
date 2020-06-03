@@ -6,15 +6,88 @@
 
     <groupId>com.github.hyx2020</groupId>
     <artifactId>helper-parent</artifactId>
-    <version>v1.0</version>
+    <version>1.0-beta</version>
     <packaging>pom</packaging>
 
     <name>Helper</name>
 
+    <url>https://github.com/hyx2020/mvn-touchair</url>
+    <description>A maven project to study maven.</description>
+    <developers>
+        <!--某个项目开发者的信息-->
+        <developer>
+            <!--SCM里项目开发者的唯一标识符-->
+            <id>HELLO WORLD</id>
+            <!--项目开发者的全名-->
+            <name>banseon</name>
+            <!--项目开发者的email-->
+            <email>banseon@126.com</email>
+            <!--项目开发者的主页的URL-->
+            <url/>
+            <!--项目开发者在项目中扮演的角色，角色元素描述了各种角色-->
+            <roles>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+            <!--项目开发者所属组织-->
+            <organization>demo</organization>
+            <!--项目开发者所属组织的URL-->
+            <organizationUrl>http://hi.baidu.com/banseon</organizationUrl>
+            <!--项目开发者属性，如即时消息如何处理等-->
+            <properties>
+                <dept>No</dept>
+            </properties>
+            <!--项目开发者所在时区， -11到12范围内的整数。-->
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+    <licenses>
+        <!--描述了项目的license，用于生成项目的web站点的license页面，其他一些报表和validation也会用到该元素。-->
+        <license>
+            <!--license用于法律上的名称-->
+            <name>Apache 2</name>
+            <!--官方的license正文页面的URL-->
+            <url>http://www.baidu.com/banseon/LICENSE-2.0.txt</url>
+            <!--项目分发的主要方式：
+      repo，可以从Maven库下载
+      manual， 用户必须手动下载和安装依赖-->
+            <distribution>repo</distribution>
+            <!--关于license的补充信息-->
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <!--SCM(Source Control Management)标签允许你配置你的代码库，供Maven web站点和其它插件使用。-->
+    <scm>
+        <!--SCM的URL,该URL描述了版本库和如何连接到版本库。欲知详情，请看SCMs提供的URL格式和列表。该连接只读。-->
+        <connection>
+            scm:svn:http://svn.baidu.com/banseon/maven/banseon/banseon-maven2-trunk(dao-trunk)
+        </connection>
+        <!--给开发者使用的，类似connection元素。即该连接不仅仅只读-->
+        <developerConnection>
+            scm:svn:http://svn.baidu.com/banseon/maven/banseon/dao-trunk
+        </developerConnection>
+        <!--当前代码的标签，在开发阶段默认为HEAD-->
+        <tag/>
+        <!--指向项目的可浏览SCM库（例如ViewVC或者Fisheye）的URL。-->
+        <url>http://svn.baidu.com/banseon</url>
+    </scm>
+
+
     <modules>
-        <module>helper-test</module>
-        <module>helper-temp</module>
+        <module>helper-mqtt</module>
     </modules>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <snapshotRepository>
@@ -31,17 +104,17 @@
             <id>sonatype-oss-release</id>
             <build>
                 <plugins>
-<!--                    <plugin>-->
-<!--                        <groupId>org.sonatype.plugins</groupId>-->
-<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                        <version>1.6.7</version>-->
-<!--                        <extensions>true</extensions>-->
-<!--                        <configuration>-->
-<!--                            <serverId>ossrh</serverId>-->
-<!--                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
-<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                        </configuration>-->
-<!--                    </plugin>-->
+                    <!--                    <plugin>-->
+                    <!--                        <groupId>org.sonatype.plugins</groupId>-->
+                    <!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
+                    <!--                        <version>1.6.7</version>-->
+                    <!--                        <extensions>true</extensions>-->
+                    <!--                        <configuration>-->
+                    <!--                            <serverId>ossrh</serverId>-->
+                    <!--                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
+                    <!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+                    <!--                        </configuration>-->
+                    <!--                    </plugin>-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -82,18 +155,18 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.8.1</version>
-                        <configuration>
-                            <fork>true</fork>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                            <encoding>UTF-8</encoding>
-<!--                            <executable>D:\ENV\JDK\jdk1.8.0_212\bin\javac.exe</executable>-->
-                        </configuration>
-                    </plugin>
+                    <!--                    <plugin>-->
+                    <!--                        <groupId>org.apache.maven.plugins</groupId>-->
+                    <!--                        <artifactId>maven-compiler-plugin</artifactId>-->
+                    <!--                        <version>3.8.1</version>-->
+                    <!--                        <configuration>-->
+                    <!--                            <fork>true</fork>-->
+                    <!--                            <source>1.8</source>-->
+                    <!--                            <target>1.8</target>-->
+                    <!--                            <encoding>UTF-8</encoding>-->
+                    <!--                            <executable>D:\ENV\JDK\jdk1.8.0_212\bin\javac.exe</executable>-->
+                    <!--                        </configuration>-->
+                    <!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
