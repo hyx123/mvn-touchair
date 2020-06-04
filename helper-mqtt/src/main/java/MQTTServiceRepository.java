@@ -27,7 +27,8 @@ class MQTTServiceRepository {
 		ObjectInputStream ois;
 		try {
 			URL url = getClass().getClassLoader().getResource("entity.txt");
-			ois = new ObjectInputStream(new FileInputStream(url.getFile()));
+//			ois = new ObjectInputStream(new FileInputStream(url.getFile()));
+			ois = new ObjectInputStream(new FileInputStream("F:\\entity.txt"));
 			this.entity = (MessageQueueEntity) ois.readObject();
 		} catch (IOException e) {
 			e.printStackTrace();

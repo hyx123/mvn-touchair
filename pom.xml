@@ -6,7 +6,7 @@
 
     <groupId>com.github.hyx2020</groupId>
     <artifactId>helper-parent</artifactId>
-    <version>1.0-beta</version>
+    <version>2020.6.4</version>
     <packaging>pom</packaging>
 
     <name>Helper</name>
@@ -99,89 +99,66 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-    <profiles>
-        <profile>
-            <id>sonatype-oss-release</id>
-            <build>
-                <plugins>
-                    <!--                    <plugin>-->
-                    <!--                        <groupId>org.sonatype.plugins</groupId>-->
-                    <!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
-                    <!--                        <version>1.6.7</version>-->
-                    <!--                        <extensions>true</extensions>-->
-                    <!--                        <configuration>-->
-                    <!--                            <serverId>ossrh</serverId>-->
-                    <!--                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
-                    <!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-                    <!--                        </configuration>-->
-                    <!--                    </plugin>-->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.9.1</version>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!--                    <plugin>-->
-                    <!--                        <groupId>org.apache.maven.plugins</groupId>-->
-                    <!--                        <artifactId>maven-compiler-plugin</artifactId>-->
-                    <!--                        <version>3.8.1</version>-->
-                    <!--                        <configuration>-->
-                    <!--                            <fork>true</fork>-->
-                    <!--                            <source>1.8</source>-->
-                    <!--                            <target>1.8</target>-->
-                    <!--                            <encoding>UTF-8</encoding>-->
-                    <!--                            <executable>D:\ENV\JDK\jdk1.8.0_212\bin\javac.exe</executable>-->
-                    <!--                        </configuration>-->
-                    <!--                    </plugin>-->
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
+    <build>
+        <plugins>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+                <configuration>
+                    <includes>
+                        <include>src</include>
+                    </includes>
+                    <fork>true</fork>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <executable>/mnt/d/ENV/linux/jdk1.8.0_251/bin/javac</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
     </properties>
 </project>
