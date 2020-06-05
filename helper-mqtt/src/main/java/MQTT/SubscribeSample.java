@@ -1,4 +1,5 @@
-import com.sun.istack.internal.NotNull;
+package MQTT;
+
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
@@ -19,7 +20,7 @@ public class SubscribeSample {
 		createService();
 	}
 
-	public void setListener(@NotNull MqttCallback callback) {
+	public void setListener(MqttCallback callback) {
 		if(client == null) {
 			createService();
 		}

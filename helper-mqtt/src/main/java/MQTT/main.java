@@ -1,9 +1,4 @@
-import Data.MessageQueueEntity;
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-
-import java.util.ArrayList;
+package MQTT;
 
 /**
  * @author yanxin.huang

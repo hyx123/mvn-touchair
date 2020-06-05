@@ -1,4 +1,6 @@
-import Data.MessageQueueEntity;
+package MQTT;
+
+import MQTT.Data.MessageQueueEntity;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
@@ -10,7 +12,7 @@ import java.net.URL;
 /**
  * @author yanxin.huang
  */
-class MQTTServiceRepository {
+public class MQTTServiceRepository {
 	private MqttClient client;
 	private MessageQueueEntity entity;
 
@@ -27,12 +29,11 @@ class MQTTServiceRepository {
 		ObjectInputStream ois;
 		try {
 			URL url = getClass().getClassLoader().getResource("entity.txt");
-//			ois = new ObjectInputStream(new FileInputStream(url.getFile()));
-			ois = new ObjectInputStream(new FileInputStream("F:\\entity.txt"));
+			assert url != null;
+			ois = new ObjectInputStream(new FileInputStream(url.getFile()));
+//			ois = new ObjectInputStream(new FileInputStream("F:\\entity.txt"));
 			this.entity = (MessageQueueEntity) ois.readObject();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}

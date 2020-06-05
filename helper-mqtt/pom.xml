@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.github.hyx2020</groupId>
         <artifactId>helper-parent</artifactId>
-        <version>2020.6.4</version>
+        <version>2020.6.5</version>
     </parent>
 
     <artifactId>helper-mqtt</artifactId>
@@ -20,21 +20,5 @@
             <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
             <version>1.2.4</version>
         </dependency>
-<!--        <dependency>-->
-<!--            &lt;!&ndash; 日志格式规范 &ndash;&gt;-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-classic</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            &lt;!&ndash; 消除代码冗余 &ndash;&gt;-->
-<!--            <groupId>org.projectlombok</groupId>-->
-<!--            <artifactId>lombok</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            &lt;!&ndash; 轻量依赖注入框架 &ndash;&gt;-->
-<!--            <groupId>com.google.inject</groupId>-->
-<!--            <artifactId>guice</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
 </project>

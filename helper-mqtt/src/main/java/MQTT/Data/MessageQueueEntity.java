@@ -1,4 +1,4 @@
-package Data;
+package MQTT.Data;
 
 import java.io.Externalizable;
 import java.io.IOException;

@@ -6,7 +6,7 @@
 
     <groupId>com.github.hyx2020</groupId>
     <artifactId>helper-parent</artifactId>
-    <version>2020.6.4</version>
+    <version>2020.6.5</version>
     <packaging>pom</packaging>
 
     <name>Helper</name>
@@ -145,13 +145,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <includes>
-                        <include>src</include>
-                    </includes>
+<!--                    <includes>-->
+<!--                        <include>src</include>-->
+<!--                    </includes>-->
                     <fork>true</fork>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <executable>/mnt/d/ENV/linux/jdk1.8.0_251/bin/javac</executable>
+                    <!--                    <executable>/mnt/d/ENV/linux/jdk1.8.0_251/bin/javac</executable>-->
                 </configuration>
             </plugin>
         </plugins>
